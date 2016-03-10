@@ -31,4 +31,11 @@ class ISBNVerify <Minitest::Test
 	def test_that_if_ends_in_x_true_10digit_isbn
 		assert_equal(true, valid_isbn?("877195869x"))
 	end
+
+	def test_check_sum_10_digit_is_valid
+		assert_equal(false, valid_check_digit_10(["8","7","7","1","9","5","8","6","9","x"]))
+	end
+	#["8","7","7","1","9","5","8","6","9","x"]
+
+
 end
